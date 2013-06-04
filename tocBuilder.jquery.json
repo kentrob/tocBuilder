@@ -16,7 +16,7 @@
         "jquery": ">=1.2.3"
     },
     "description": "A flexible jQuery plugin that creates a table of contents based on headings in the document. You can use either standard headings or any elements with the class 'tocEntry'. You can choose the heading range to process, for example 2-4, and provide a callback to parse and modify the heading text used in the contents link. Back links from the headings to the table of contents are supported by default. All elements can be styled using CSS classes and sample CSS is provided.",
-    "keywords": [ "jquery", "TOC", "table of contents"],
+    "keywords": [ "jquery", "TOC", "contents", "table"],
     "homepage": "https://github.com/kentrob/tocBuilder",
     "docs":"http://www.proofbydesign.com/Resources.aspx/TocBuilder"
 }
