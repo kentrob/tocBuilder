@@ -1,0 +1,81 @@
+﻿/* These styles are only used in the examples and can be ignored. */
+body
+{
+    font-family: "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0.5em;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+.sampleExplanation
+{
+    font-style: italic;
+}
+p.safeHeading
+{
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/*
+    These styles are 
+*/
+.tocContainer
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    padding-top: 0px; /* first entry has its own padding. */
+    background-color: #FBF8CD;
+}
+.tocEntry
+{
+    /* This is just a marker for anything that wants to be a tocEntry (if you are not using type=headings) but you can also use it to style the elements that are used to create the TOC. */
+}
+a.tocLink, a.tocLink:visited
+{
+    font-size: 11pt;
+    font-weight: normal;
+    color: #00F;
+}
+a.tocBackLink, a.tocBackLink:visited
+{
+    /* Applied to the A link we insert to the right of every tocEntry/heading element. */
+    font-size: 11pt;
+    padding-left: 0.5em;
+    font-weight: normal;
+    color: #00F;
+}
+.tocBackTarget
+{
+    /* Applied to the anchor used to navigate back to the TOC div. */
+}
+div.tocLevel1
+{
+    padding-top: 0.3em;
+    font-size: 0.9em;
+}
+div.tocLevel2
+{
+    padding-left: 1em;
+    font-size: 0.8em;
+}
+div.tocLevel3
+{
+    padding-left: 2em;
+}
+div.tocLevel4
+{
+    padding-left: 3em;
+}
+div.tocLevel5, div.tocLevel6
+{
+    padding-left: 4em;
+    font-style: italic;
+}
