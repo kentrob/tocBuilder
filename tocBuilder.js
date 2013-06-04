@@ -1,6 +1,6 @@
 /*
-* jQuery tocBuilder plugin, version 1.2.1.
-* Go to http://proofbydesign.com/Resources/ for more information and documentation.
+* jQuery tocBuilder plugin, version 1.2.2.
+* Go to http://www.proofbydesign.com/Resources.aspx/TocBuilder for more information and documentation.
 *
 * Copyright (c) 2013 Rob Kent <rob.kent@proofbydesign.com>
 * Licensed under the MIT License:
