@@ -1,8 +1,8 @@
 /*
-* jQuery tocBuilder plugin, version 1.2.2.
+* jQuery tocBuilder plugin, version 1.2.3.
 * Go to http://www.proofbydesign.com/Resources.aspx/TocBuilder for more information and documentation.
 *
-* Copyright (c) 2013 Rob Kent <rob.kent@proofbydesign.com>
+* Copyright (c) 2014 Rob Kent <rob.kent@proofbydesign.com>
 * Licensed under the MIT License:
 *   http://www.opensource.org/licenses/mit-license.php
 */
@@ -59,7 +59,7 @@
                     'class': 'tocBackTarget'
                 }).appendTo($that);
 
-            // If props.type=headings, select all Hx elements, otherwise select all elements with a tocEntry class; 
+            // If props.type=headings, select all Hx elements, otherwise select all elements with a tocEntry class;
             // each tocEntry element should have a data-tocLevel attribute whose value should be a number.
             var selector;
             if (props.type === 'headings') {
@@ -70,15 +70,17 @@
             }
 
             var $container;
+            var prefix = 'body';
             if (!props.parentId || props.parentId.length === 0) {
                 $container = $('body');
             } else {
                 $container = $('#' + props.parentId);
+                prefix = props.parentId;
                 if ($container.length === 0) {
                     throw new Error("Could not find parent element with id '" + props.parentId + "'.");
                 }
             }
-            
+
             $(selector, $container).each(function (index) {
                 var $this = $(this);
                 var level = 1;
@@ -98,7 +100,7 @@
                 // Only process entries whose level is in range.
                 if (level < props.startLevel || level > props.endLevel) return;
 
-                var targetId = "toc_" + level + "_" + index;
+                var targetId = prefix +"_toc_" + level + "_" + index;
 
                 // Check if a previous TOC has already processed and stored the original heading. If not,
                 // so that we don't include our own back link in the text when creating
@@ -145,7 +147,7 @@
                     'class': 'tocLink'
                 })
                 .appendTo($tocLine);
-                
+
                 $tocLine.appendTo($that);
             });
 
